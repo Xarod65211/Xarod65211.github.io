@@ -1,0 +1,63 @@
+@font-face { font-family: Inter; src: url("fuentes/inter-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: Inter; src: url("fuentes/inter-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: Poppins; src: url("fuentes/poppins-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+:root { --marino: #172a46; --marino-700: #22395c; --turquesa: #0f766e; --turquesa-claro: #5eead4; --fondo: #f4f6f9; --borde: #e2e8f0; --texto: #1e293b; --suave: #475569; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font: 16px/1.6 Inter, system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
+h1, h2, h3 { font-family: Poppins, Inter, sans-serif; font-weight: 600; color: var(--marino); margin: 0; line-height: 1.2; }
+a { color: var(--turquesa); font-weight: 600; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--turquesa); outline-offset: 3px; }
+.ancho { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+.portada { background: var(--marino); color: #e2e8f0; padding: 72px 0 64px; }
+.portada h1 { color: #fff; font-size: clamp(34px, 6vw, 52px); }
+.portada .cargo { color: var(--turquesa-claro); font-weight: 600; font-size: 18px; margin: 12px 0 0; }
+.portada p.intro { max-width: 640px; font-size: 18px; margin: 20px 0 0; color: #cbd5e1; }
+.botones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.boton { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.boton.principal { background: var(--turquesa-claro); color: var(--marino); }
+.boton.principal:hover { background: #99f6e4; }
+.boton.borde { border: 1px solid #475d80; color: #fff; }
+.boton.borde:hover { border-color: var(--turquesa-claro); }
+.contacto { margin-top: 24px; font-size: 15px; color: #94a3b8; }
+.contacto a { color: #e2e8f0; font-weight: 400; }
+
+section.bloque { padding: 64px 0 8px; }
+section.bloque > .ancho > h2 { font-size: 28px; }
+section.bloque > .ancho > p.bajada { color: var(--suave); margin: 8px 0 0; max-width: 680px; }
+
+.proyecto { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; align-items: center; background: #fff; border: 1px solid var(--borde);
+            border-radius: 12px; padding: 24px; margin-top: 28px; }
+.proyecto:nth-of-type(even) { grid-template-columns: 1fr 1.15fr; }
+.proyecto:nth-of-type(even) .captura { order: 2; }
+.captura img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--borde); }
+.proyecto h3 { font-size: 22px; }
+.pila { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+.pila li { font-size: 13px; font-weight: 600; color: var(--turquesa); background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; padding: 2px 8px; }
+.proyecto p { margin: 12px 0 0; color: var(--suave); }
+.proyecto ul.puntos { margin: 12px 0 0; padding-left: 18px; color: var(--suave); }
+.proyecto ul.puntos li { margin: 4px 0; }
+.enlaces { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+
+.columnas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+.caja { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 20px; }
+.caja h3 { font-size: 17px; }
+.caja p { margin: 8px 0 0; color: var(--suave); font-size: 15px; }
+
+.linea { margin-top: 28px; border-left: 2px solid var(--borde); padding-left: 24px; }
+.puesto { position: relative; margin-bottom: 24px; }
+.puesto::before { content: ""; position: absolute; left: -31px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--turquesa); border: 2px solid var(--fondo); }
+.puesto h3 { font-size: 18px; }
+.puesto .lugar { color: var(--suave); font-size: 15px; margin: 2px 0 0; }
+.puesto p { margin: 8px 0 0; }
+
+footer { margin-top: 64px; padding: 32px 0; border-top: 1px solid var(--borde); color: var(--suave); font-size: 14px; }
+
+@media (max-width: 860px) {
+    .proyecto, .proyecto:nth-of-type(even) { grid-template-columns: 1fr; }
+    .proyecto:nth-of-type(even) .captura { order: 0; }
+    .columnas { grid-template-columns: 1fr; }
+    .portada { padding: 48px 0; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

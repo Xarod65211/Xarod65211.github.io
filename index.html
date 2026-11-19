@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aramis Corini · Sistemas web y soporte TI</title>
+    <meta name="description" content="Portafolio de Aramis Corini: sistemas web de gestión con Laravel, React y Django, desplegados en Docker.">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="portada">
+    <div class="ancho">
+        <h1>Aramis Corini</h1>
+        <p class="cargo">Desarrollo de sistemas web · Soporte TI · Redes</p>
+        <p class="intro">Trabajo en el área de TIC de una empresa industrial en El Alto. Además del soporte diario, construyo los sistemas web que usa el personal y los dejo funcionando en servidores propios, con manuales para operarlos.</p>
+        <div class="botones">
+            <a class="boton principal" href="#proyectos">Ver proyectos</a>
+            <a class="boton borde" href="CV_Aramis_Corini.pdf">Descargar CV (PDF)</a>
+        </div>
+        <p class="contacto">
+            <a href="mailto:coriniaramis@gmail.com">coriniaramis@gmail.com</a> · +591 75225948 · La Paz, Bolivia ·
+            <a href="https://github.com/Xarod65211">github.com/Xarod65211</a>
+        </p>
+    </div>
+</header>
+
+<main>
+<section class="bloque" id="proyectos" aria-labelledby="t-proyectos">
+    <div class="ancho">
+        <h2 id="t-proyectos">Proyectos</h2>
+        <p class="bajada">Versiones de demostración escritas desde cero para este portafolio, con datos ficticios. Cada una se levanta con <code>docker compose up -d</code> e incluye pruebas automatizadas y usuarios de demostración por rol.</p>
+
+        <article class="proyecto">
+            <div class="captura"><img src="img/control-epp.png" alt="Panel del sistema Control de EPP con indicadores y entregas por mes" width="1440" height="900" loading="lazy"></div>
+            <div>
+                <h3>Control de EPP</h3>
+                <ul class="pila"><li>Laravel 13</li><li>React</li><li>TypeScript</li><li>MariaDB</li><li>Docker</li></ul>
+                <ul class="puntos">
+                    <li>Solicitudes con aprobación: aprobar reserva el stock y cancelar lo devuelve.</li>
+                    <li>Stock por talla con kárdex; nunca queda negativo.</li>
+                    <li>Entrega con acta PDF y fecha de reposición según la vida útil.</li>
+                    <li>29 pruebas automatizadas.</li>
+                </ul>
+                <div class="enlaces"><a href="https://github.com/Xarod65211/control-epp">Código y capturas</a></div>
+            </div>
+        </article>
+
+        <article class="proyecto">
+            <div class="captura"><img src="img/formularios-dinamicos.png" alt="Revisión de una respuesta con un valor fuera de rango resaltado" width="1440" height="900" loading="lazy"></div>
+            <div>
+                <h3>Formularios dinámicos</h3>
+                <ul class="pila"><li>Laravel 13</li><li>React</li><li>TypeScript</li><li>MariaDB</li></ul>
+                <ul class="puntos">
+                    <li>Diseñador de formularios de inspección sin programar.</li>
+                    <li>Cada sección la llena un rol; el servidor impide escribir en las ajenas.</li>
+                    <li>Rangos aceptados, campos calculados y gráfico por campo.</li>
+                    <li>27 pruebas automatizadas.</li>
+                </ul>
+                <div class="enlaces"><a href="https://github.com/Xarod65211/formularios-dinamicos">Código y capturas</a></div>
+            </div>
+        </article>
+
+        <article class="proyecto">
+            <div class="captura"><img src="img/api-notificaciones.png" alt="Panel de la pasarela con notificaciones enviadas y fallidas por día" width="1440" height="900" loading="lazy"></div>
+            <div>
+                <h3>Pasarela de notificaciones</h3>
+                <ul class="pila"><li>Laravel 13</li><li>API REST</li><li>Colas</li><li>Mailpit</li><li>Docker</li></ul>
+                <ul class="puntos">
+                    <li>API para que varios sistemas envíen correos, cada uno con su token.</li>
+                    <li>Cola con 5 reintentos, idempotencia y límite por minuto.</li>
+                    <li>Panel con el error exacto de cada envío fallido y reintento.</li>
+                    <li>30 pruebas automatizadas.</li>
+                </ul>
+                <div class="enlaces"><a href="https://github.com/Xarod65211/api-notificaciones">Código y capturas</a></div>
+            </div>
+        </article>
+
+        <article class="proyecto">
+            <div class="captura"><img src="img/inventario-activos.png" alt="Ficha de un activo con su código QR, depreciación e historial" width="1440" height="900" loading="lazy"></div>
+            <div>
+                <h3>Inventario de activos con QR</h3>
+                <ul class="pila"><li>Django 5.2</li><li>Python</li><li>MariaDB</li><li>Docker</li></ul>
+                <ul class="puntos">
+                    <li>Etiquetas QR que abren una ficha pública sin datos sensibles.</li>
+                    <li>Asignaciones y traslados con acta PDF e historial.</li>
+                    <li>Mantenimientos con alertas e importación desde Excel con revisión previa.</li>
+                    <li>11 pruebas automatizadas.</li>
+                </ul>
+                <div class="enlaces"><a href="https://github.com/Xarod65211/inventario-activos">Código y capturas</a></div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="bloque" id="habilidades" aria-labelledby="t-hab">
+    <div class="ancho">
+        <h2 id="t-hab">Con qué trabajo</h2>
+        <div class="columnas">
+            <div class="caja"><h3>Desarrollo web</h3><p>PHP y Laravel, Python y Django, React con TypeScript, Inertia.js, Tailwind CSS, MariaDB y MySQL, Git.</p></div>
+            <div class="caja"><h3>Despliegue</h3><p>Docker con nginx y PHP-FPM, IIS como proxy inverso, certificados HTTPS internos, inicio de sesión con Active Directory por LDAPS, respaldos y restauración.</p></div>
+            <div class="caja"><h3>Soporte y redes</h3><p>Soporte a usuarios, hardware y sistemas operativos, cámaras y periféricos. Redes con MikroTik: VLAN, OSPF, VRRP, firewall y VPN.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="bloque" id="experiencia" aria-labelledby="t-exp">
+    <div class="ancho">
+        <h2 id="t-exp">Experiencia</h2>
+        <div class="linea">
+            <div class="puesto">
+                <h3>Asistente de TIC´s</h3>
+                <p class="lugar">Jacha Inti Industrial S.A. · Diciembre 2025 a la fecha</p>
+                <p>Desarrollo y mantengo sistemas web de gestión en producción, migré dos sistemas heredados de PHP a Laravel y los desplegué en Docker con HTTPS y acceso por cuentas de Windows. Escribo los manuales técnicos y atiendo el soporte del personal.</p>
+            </div>
+            <div class="puesto">
+                <h3>Pasante del área de Sistemas</h3>
+                <p class="lugar">Jacha Inti Industrial S.A. · Septiembre a noviembre 2025</p>
+                <p>Mantenimiento de equipos, instalación de software y configuración de periféricos.</p>
+            </div>
+            <div class="puesto">
+                <h3>Técnico Superior en Informática Industrial (en curso)</h3>
+                <p class="lugar">Escuela Industrial Superior Pedro Domingo Murillo · 2023 a la fecha</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="ancho">
+        <a href="mailto:coriniaramis@gmail.com">coriniaramis@gmail.com</a> · <a href="https://github.com/Xarod65211">GitHub</a> · <a href="CV_Aramis_Corini.pdf">CV en PDF</a>
+    </div>
+</footer>
+</body>
+</html>
